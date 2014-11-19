@@ -43,7 +43,7 @@ function PageRank(url, callback) {
 
 util.inherits(PageRank, Stream);
 
-PageRank.HOST = 'toolbarqueries.google.com';
+PageRank.HOST = 'toolbarqueries.google.com.hk';
 PageRank.USER_AGENT = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.0.6) Gecko/20060728 Firefox/1.5';
 
 PageRank.HASH_START_1 = 0x1505;
