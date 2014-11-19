@@ -27,18 +27,8 @@ var URL = require('url');
  * @author Nathan Friedly - http://nfriedly.com
  * Based on PageRank Lookup v1.1 by HM2K
  */
-function PageRank(url, callback) {
-	Stream.call(this);
-	this.readable = true;
-	this.writable = false;
-	
-	//
-	if (typeof url == "string") {
-		url = URL.parse(url);
-	}
-	url = URL.format(url);
-	
-	return this.get(url, callback);
+function PageRank() {
+	return;
 }
 
 util.inherits(PageRank, Stream);
@@ -54,12 +44,23 @@ PageRank.HASH_MULTIPLIER_2 = 0x1003F;
 
 PageRank.get = function(url, callback) {
 	return new PageRank(url, callback);
-}
+};
 
 var pr = PageRank.prototype;
 
 var INT_32_MAX = 4294967296;  // 2^32
 var INT_32_MIN = -2147483648; // -2^31
+
+pr.countPR = function (url, callback) {
+	Stream.call(this);
+
+	if (typeof url == "string") {
+		url = URL.parse(url);
+	}
+	url = URL.format(url);
+
+	return this.get(url, callback);
+};
 
 //converts a string to a 32-bit-compatible Number
 pr.strToNum = function (string, start, multiplier) {
