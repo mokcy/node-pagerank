@@ -1,0 +1,5 @@
+.travis.yml
+test.sh
+spec/
+cli.js
+npm-debug.log

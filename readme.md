@@ -1,9 +1,9 @@
-node-pagerank
+node-pagerank cn
 =============
 
 A library for looking up the Google PageRank of any given web page.
 
-[![Build Status](https://travis-ci.org/nfriedly/node-pagerank.png?branch=master)](https://travis-ci.org/nfriedly/node-pagerank)
+[![Build Status](https://travis-ci.org/mokcy/pagerank-cn.png?branch=master)](https://travis-ci.org/mokcy/pagerank-cn)
 
 Installation
 ------------

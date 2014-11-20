@@ -34,7 +34,7 @@ function PageRank() {
 util.inherits(PageRank, Stream);
 
 PageRank.HOST = 'toolbarqueries.google.com.hk';
-PageRank.USER_AGENT = 'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.0.6) Gecko/20060728 Firefox/1.5';
+PageRank.USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/38.0.2125.104 Safari/537.36';
 
 PageRank.HASH_START_1 = 0x1505;
 PageRank.HASH_MULTIPLIER_1= 0x21;
@@ -50,6 +50,10 @@ var pr = PageRank.prototype;
 
 var INT_32_MAX = 4294967296;  // 2^32
 var INT_32_MIN = -2147483648; // -2^31
+
+pr.setUserAgent = function (userAgent) {
+	PageRank.USER_AGENT = userAgent;
+};
 
 pr.countPR = function (url, callback) {
 	Stream.call(this);
