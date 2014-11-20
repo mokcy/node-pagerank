@@ -1,11 +1,11 @@
 {
 	"name": "pagerank-cn",
 	"description": "Tool for finding the Google PageRank of a given url. Can be used as a node module or a cli command when installed with -g",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"author": ["Nathan Friedly - http://nfriedly.com/", "Fengda Huang - http://www.phodal.com/"],
 	"repository": { 
 		"type": "git",
-		"url": "https://github.com/nfriedly/node-pagerank"
+		"url": "https://github.com/mokcy/node-pagerank"
 	},
 	"main": "pagerank.js",
 	"scripts": {
