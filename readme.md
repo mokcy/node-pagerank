@@ -3,28 +3,26 @@ node-pagerank cn
 
 A library for looking up the Google PageRank of any given web page.
 
-[![Build Status](https://travis-ci.org/mokcy/pagerank-cn.png?branch=master)](https://travis-ci.org/mokcy/pagerank-cn)
-
 Installation
 ------------
 
-    npm install -g pagerank
+    npm install -g pagerank-cn
 
 Usage
 -----
 
-    var PageRank = require('pagerank');
+    var PageRank = require('pagerank-cn');
     
     // It's a ReadibleStream
-    new PageRank('http://example.com/').pipe(myCoolWriteableStream);
-    
+    new PageRank('http://www.phodal.com/').pipe(myCoolWriteableStream);
+
     // It's an event Emitter
     // It will emit one data event with either a number or null
-    new PageRank('http://example.com/').on('data', console.log).on('error', console.error);
+    new PageRank('http://www.phodal.com/').on('data', console.log).on('error', console.error);
  
     // And it accepts callbacks
     // pageRank will either be a number or null
-    new PageRank('http://example.com/', function(error, pageRank) {
+    new PageRank('http://www.phodal.com/', function(error, pageRank) {
         console.log(error, pageRank);
     });
 
